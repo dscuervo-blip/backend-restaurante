@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# ── Redirigir todo el tráfico a public/ ──────────────────────────────────────
+# Esto protege src/, vendor/, database/ del acceso web directo.
+
+RewriteCond %{REQUEST_URI} !^/ms-productos/public/
+RewriteRule ^(.*)$ public/$1 [L]
