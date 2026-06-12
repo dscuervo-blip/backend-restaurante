@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirigir raiz del proyecto al directorio public/
+RewriteRule ^$ public/ [L]
+RewriteRule ((?s).*) public/$1 [L]
